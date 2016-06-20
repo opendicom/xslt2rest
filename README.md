@@ -1,13 +1,17 @@
 # xslt2rest
-html page which returns the result of a xslt2 transformation with params, thanks to saxonce 1.1. The transformation is performed on the client-side from the javascript engine of the client.
+The xslt2.html webpage returns the result of a xslt2 transformation with params.
+
+The transform xsl, source xml and params are included in the invocation URI 
+
+The response page contains a javascript saxonce 1.1 which performs the transformation client-side.
 
 ##invocation from any javascript enabled web browser
 
-xsl.html?xsl={transformXsl}&amp;xml={sourceXml}&amp;{param1}={value1}
+xsl.html?xsl={transformXsl}&xml={sourceXml}
 
-&amp;{param1}={valor1} is optional and may be repeated for other params
+&{param1}={valor1} may be appended for a first and for any more parameters
 
-Reemplazar
+###Replace
 
 {transformXsl} x URI of the transform
 {sourceXml} x URI of the xml source
