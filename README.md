@@ -1,9 +1,7 @@
 # xslt2rest
-The xslt2.html webpage returns the result of a transformation xslt2 with params.
-
-The transform xsl, source xml and params are defined in the invocation URI. 
-
-The response page contains a javascript saxonce 1.1 which performs the transformation client-side.
+- The xslt2.html webpage returns the result of a transformation xslt2 with params.
+- The transform xsl, source xml and params are defined in the invocation URI. 
+- The response page contains a javascript saxonce 1.1 which performs the transformation client-side.
 
 ##invocation from any javascript enabled web browser
 
