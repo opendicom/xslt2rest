@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>saxonce</title>
+        <script type="text/javascript" language="javascript" src="SaxonceDebug/Saxonce.nocache.js"></script>
+        <script type="text/javascript">
+              function jsonParams ()
+              {
+                var params = location.search.substr(1).split("&");                
+                var jsonobject ={};
+                for (var i=0; i<params.length; i++)
+                {
+                    duo = params[i].split("=");
+                    jsonobject[duo[0]]=duo[1];
+                }
+                return jsonobject;
+              }
+              
+              function getParam ( input )
+              {
+                var params = location.search.substr(location.search.indexOf("?")+1);
+                var value = "";
+                params = params.split("&");
+                for (var i=0; i<params.length; i++)
+                {
+                    temp = params[i].split("=");
+                    if ( [temp[0]] == input ) { value = temp[1]; }
+                }
+                return value;
+              }
+        </script>
+        <script type="text/javascript">
+            function onSaxonLoad() {
+                Saxon.run( {
+                            stylesheet: getParam('xsl'),
+                            source:     getParam('xml'),
+                            parameters: jsonParams()
+                            }
+                          )
+                };          
+        </script>        
+    </head>
+    <body/>    
+</html>
